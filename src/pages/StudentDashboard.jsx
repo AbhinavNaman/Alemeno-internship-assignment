@@ -82,7 +82,7 @@ const StudentDashboard = () => {
     }
   };
 
-  console.log("-->", user?.email);
+
   useEffect(() => {
     const fetchEnrolledCourses = async () => {
       console.log("out side fetchEnrolledCourses");
@@ -97,7 +97,17 @@ const StudentDashboard = () => {
     fetchEnrolledCourses();
   }, [user]);
 
-  console.log("$$$$$$$$$$$$$", enrolledCourses);
+    if(enrolledCourses.length === 0){
+    return (
+      <>
+      <Navbar />
+      <div className="p-10 pt-10">
+        <h1 className="font-semibold text-2xl ">Enrolled Courses</h1>
+        <p className="text-gray-500 text-4xl">You have not enrolled in any courses yet.</p>
+      </div>
+    </>
+    )
+  }
 
   return (
     <>
