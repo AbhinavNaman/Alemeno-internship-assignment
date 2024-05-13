@@ -46,8 +46,8 @@ const CourseDetail = () => {
       });
   }, []);
 
-  if (user?.email) console.log("*******", user?.email);
-  if (user?.uid) console.log("*******", user?.uid);
+  // if (user?.email) console.log("*******", user?.email);
+  // if (user?.uid) console.log("*******", user?.uid);
 
  
   // Import necessary Firestore functions
