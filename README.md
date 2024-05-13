@@ -1,5 +1,6 @@
 # React Vite Project
 
+Vercel Deployed link : https://alemeno-internship-assignment.vercel.app/
 This project is a React application bootstrapped with Vite.
 
 ## Getting Started
