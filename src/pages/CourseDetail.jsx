@@ -108,6 +108,8 @@ const CourseDetail = () => {
           </div>
           <div className="flex flex-col mr-6">
             {/* <Button className="m-4 w-40 bg-cyan-400">View</Button> */}
+           {user && 
+            
             <Button
               className={enrolled ? "m-2 mb-4 bg-blue-500 w-36": "m-2 mb-4 bg-green-500 w-36"}
               onClick={handleEnroll}
@@ -115,6 +117,7 @@ const CourseDetail = () => {
               {enrolled ? "Enrolled !" : "Enroll"}
 
             </Button>
+            }
             <p className="ml-2 underline decoration-solid">Location:</p>
             <p className="ml-2 font-semibold text-lg">{data?.location}</p>
             <br />
