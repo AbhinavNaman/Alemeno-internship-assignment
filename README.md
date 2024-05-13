@@ -14,7 +14,7 @@ Follow these instructions to get a local copy of the project up and running on y
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/react-vite-project.git
+git clone https://github.com/AbhinavNaman/Alemeno-internship-assignment.git
 
 # Navigate to the Project Directory
 cd react-vite-project
