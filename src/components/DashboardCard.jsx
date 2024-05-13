@@ -29,7 +29,7 @@ const DashboardCard = ({ data }) => {
       .then((userData) => {
         if (userData) {
           setUser(userData);
-          console.log(userData);
+          // console.log(userData);
         }
       })
       .catch((error) => {
