@@ -25,6 +25,7 @@ const firestore = getFirestore(app);
 const CourseDetail = () => {
   const [user, setUser] = useState();
   const [data, setData] = useState([]);
+  const [enrolled, setEnrolled] = useState(false);
   const params = useParams();
   const dispatch = useDispatch();
 
@@ -46,14 +47,9 @@ const CourseDetail = () => {
       });
   }, []);
 
-  // if (user?.email) console.log("*******", user?.email);
-  // if (user?.uid) console.log("*******", user?.uid);
-
- 
-  // Import necessary Firestore functions
   
   const handleEnroll = async () => {
-    console.log("hanndle enroll inside");
+    setEnrolled(enrolled => !enrolled)
     if (!user) {
       // User is not authenticated
       console.log("user not authorized");
@@ -113,10 +109,11 @@ const CourseDetail = () => {
           <div className="flex flex-col mr-6">
             {/* <Button className="m-4 w-40 bg-cyan-400">View</Button> */}
             <Button
-              className="m-2 mb-4 bg-green-500 w-36"
+              className={enrolled ? "m-2 mb-4 bg-blue-500 w-36": "m-2 mb-4 bg-green-500 w-36"}
               onClick={handleEnroll}
             >
-              Enroll
+              {enrolled ? "Enrolled !" : "Enroll"}
+
             </Button>
             <p className="ml-2 underline decoration-solid">Location:</p>
             <p className="ml-2 font-semibold text-lg">{data?.location}</p>
