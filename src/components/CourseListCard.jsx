@@ -7,7 +7,7 @@ const CourseListCard = ({ info }) => {
   console.log(info);
   return (
     <Link to={`/course/${info.id}`}>
-      <div className="w-auto flex justify-around mt-6 border-2 border-gray-300 rounded-lg ">
+      <div className="w-auto flex justify-around mt-6 border-2 border-gray-300 rounded-lg hover:border-gray-400 hover:scale-105 transition hover:delay-150 duration-150 ease-in-out">
         <div className="w-auto">
           <img src={info.thumbnail} className="w-auto h-48 rounded-lg m-2" />
         </div>
