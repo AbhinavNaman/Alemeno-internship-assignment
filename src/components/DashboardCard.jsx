@@ -119,9 +119,16 @@ const DashboardCard = ({ data }) => {
           </div>
         </div>
       </div>
-      <Progress value={33} className="m-4 w-auto border-2 border-gray-300" />
+      <Progress value={completed? 100: getRandomInt(20,80)} className="m-4 w-auto border-2 border-gray-300" />
     </div>
   );
 };
 
 export default DashboardCard;
+
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
