@@ -40,7 +40,7 @@ const Navbar = () => {
   }, [dispatch]); // Added dispatch as a dependency
 
   return (
-    <div className="flex justify-between pt-4 pb-4">
+   <div className="flex justify-between p-4 border-2 rounded-2xl mt-4 border-gray-300 sticky top-0 backdrop-blur-xl z-50">
       <div className="font-bold text-4xl flex ">
         <Avatar>
           <AvatarImage src="https://github.com/shadcn.png" />
@@ -48,7 +48,7 @@ const Navbar = () => {
         </Avatar>
         <p className="px-4">Coursera</p>
       </div>
-      <div>
+      <div className="font-semibold text-lg pt-1">
         {"welcome "}
         {user}
       </div>
